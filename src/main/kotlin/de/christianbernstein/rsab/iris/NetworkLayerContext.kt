@@ -1,4 +1,4 @@
-package de.christianbernstein.rsab.iris.server
+package de.christianbernstein.rsab.iris
 
 data class NetworkLayerContext(
     val networkID: String

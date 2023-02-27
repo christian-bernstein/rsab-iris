@@ -1,10 +1,7 @@
-package de.christianbernstein.rsab.iris.web
+package de.christianbernstein.rsab.iris
 
-import de.christianbernstein.rsab.iris.Iris
-import de.christianbernstein.rsab.iris.shard.Shard
 import de.christianbernstein.rsab.iris.packetier.Packet
 import de.christianbernstein.rsab.iris.packetier.PacketierNetAdapter
-import de.christianbernstein.rsab.iris.server.ServerShard
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*

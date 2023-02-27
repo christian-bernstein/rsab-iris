@@ -1,4 +1,3 @@
 package de.christianbernstein.rsab.iris.packetier
 
-interface PacketSubscriber {
-}
+typealias PacketSubscriber = (ctx: PacketSubscriberContext) -> Unit

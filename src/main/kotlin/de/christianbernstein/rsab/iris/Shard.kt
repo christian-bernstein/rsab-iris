@@ -1,6 +1,4 @@
-package de.christianbernstein.rsab.iris.shard
-
-import de.christianbernstein.rsab.iris.Iris
+package de.christianbernstein.rsab.iris
 
 abstract class Shard<Impl>(
     val core: Iris,

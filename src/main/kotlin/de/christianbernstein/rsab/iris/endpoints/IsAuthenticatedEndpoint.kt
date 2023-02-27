@@ -1,4 +1,9 @@
 package de.christianbernstein.rsab.iris.endpoints
 
-class IsAuthenticatedEndpoint {
-}
+import de.christianbernstein.rsab.iris.Endpoint
+
+class IsAuthenticatedEndpoint: Endpoint("is-authenticated", {
+    respond(mapOf(
+        "authenticated" to session.getCachedProperty("authenticated", false)!!
+    ))
+})

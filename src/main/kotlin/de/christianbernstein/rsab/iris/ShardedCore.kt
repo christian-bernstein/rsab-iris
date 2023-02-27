@@ -1,4 +1,4 @@
-package de.christianbernstein.rsab.iris.shard
+package de.christianbernstein.rsab.iris
 
 @Suppress("UNCHECKED_CAST")
 open class ShardedCore {

@@ -1,7 +1,5 @@
-package de.christianbernstein.rsab.iris.packet
+package de.christianbernstein.rsab.iris
 
-import de.christianbernstein.rsab.iris.Iris
-import de.christianbernstein.rsab.iris.shard.Shard
 import de.christianbernstein.rsab.iris.packetier.PacketEngine
 
 class PacketEngineShard(core: Iris) : Shard<PacketEngineShard>(core) {

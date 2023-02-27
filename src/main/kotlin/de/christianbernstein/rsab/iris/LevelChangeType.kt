@@ -1,3 +1,5 @@
 package de.christianbernstein.rsab.iris
 
-data class LevelChangeType()
+enum class LevelChangeType {
+    EMPTY, DECREASING, STABLE, INCREASING, FULL
+}

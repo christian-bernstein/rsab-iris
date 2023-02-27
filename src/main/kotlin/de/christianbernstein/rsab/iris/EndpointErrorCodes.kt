@@ -1,4 +1,4 @@
-package de.christianbernstein.rsab.iris.server
+package de.christianbernstein.rsab.iris
 
 enum class EndpointErrorCodes(val code: Int) {
     SUCCESS(0),

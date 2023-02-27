@@ -1,4 +1,4 @@
-package de.christianbernstein.rsab.iris.web
+package de.christianbernstein.rsab.iris
 
 import io.ktor.websocket.*
 import java.util.concurrent.atomic.AtomicInteger

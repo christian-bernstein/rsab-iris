@@ -1,4 +1,4 @@
-package de.christianbernstein.rsab.iris.server
+package de.christianbernstein.rsab.iris
 
 import de.christianbernstein.rsab.iris.packetier.PacketSubscriberContext
 
@@ -8,10 +8,10 @@ open class Endpoint(
     val handler: PacketSubscriberContext.() -> Unit = {}
 ) {
 
-    fun handle() {
-        this.handler()
-    }
+    open fun handle(): PacketSubscriberContext.() -> Unit = this.handler
 
-    fun pair(): Pair<String, PacketSubscriberContext.() -> Unit> = this.name to this.handler
+    fun getServer(): ServerShard = iris().server()
+
+    fun pair(): Pair<String, PacketSubscriberContext.() -> Unit> = this.name to this.handle()
 
 }

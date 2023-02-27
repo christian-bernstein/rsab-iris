@@ -1,14 +1,13 @@
-package de.christianbernstein.rsab.iris.server
+package de.christianbernstein.rsab.iris
 
-import de.christianbernstein.rsab.iris.Iris
 import de.christianbernstein.rsab.iris.endpoints.*
 import de.christianbernstein.rsab.iris.packetier.PacketSubscriberContext
-import de.christianbernstein.rsab.iris.Shard
 import de.christianbernstein.rsab.iris.packetier.createProtocol
 
 @Suppress("MemberVisibilityCanBePrivate")
 class ServerShard(core: Iris) : Shard<ServerShard>(core, {
-    core.packetier().engine.createSession(MAIN_SERVER_ID, createProtocol(
+    core.packetier().engine.createSession(
+        MAIN_SERVER_ID, createProtocol(
         "ping" to { respond(emptyMap()) },
         "test" to { println("test") },
         "set-num" to { session.setCachedProperty("num", packet.getInt("num")) },
