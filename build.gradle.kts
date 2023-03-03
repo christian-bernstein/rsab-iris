@@ -1,5 +1,6 @@
 @file:Suppress("SpellCheckingInspection")
 
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.utils.addToStdlib.ifTrue
 import java.util.Date
@@ -50,6 +51,13 @@ application {
 }
 
 /**
+ * TODO: Check...
+ */
+tasks.getByName<ShadowJar>("shadowJar") {
+    relocate("io.netty", "irisShadow.io.netty")
+}
+
+/**
  * Update the version / build-result file
  */
 tasks.create("incrementVersion") {
@@ -89,3 +97,4 @@ publishing {
         }
     }
 }
+
